@@ -1,97 +1,204 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# \# 🎓 University Finder App
 
-# Getting Started
+# 
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+# A cross-platform mobile application for iOS \& Android built with React Native. This app allows users to browse a global list of universities, filter them by country, view their websites, and save their favorites. All user preferences and favorites are stored locally, ensuring they persist across app sessions.
 
-## Step 1: Start Metro
+# 
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+# \## 📸 Screenshots \& Demo
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+# 
 
-```sh
-# Using npm
-npm start
+# \*(Here you should insert your screenshots or a GIF of the app in action. This is the most important part of the README!)\*
 
-# OR using Yarn
-yarn start
-```
+# 
 
-## Step 2: Build and run your app
+# | Browse Screen | Favorites Screen | WebView Modal |
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+# | :-----------: | :--------------: | :-----------: |
 
-### Android
+# | <img src="URL\_TO\_YOUR\_BROWSE\_SCREENSHOT.png" width="250"> | <img src="URL\_TO\_YOUR\_FAVORITES\_SCREENSHOT.png" width="250"> | <img src="URL\_TO\_YOUR\_MODAL\_SCREENSHOT.png" width="250"> |
 
-```sh
-# Using npm
-npm run android
+# 
 
-# OR using Yarn
-yarn android
-```
+# 
 
-### iOS
+# \## ✨ Features
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+# 
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+# \- \[x] \*\*Bottom Tab Navigation:\*\* Two main tabs for "Browse" and "Favorites".
 
-```sh
-bundle install
-```
+# \- \[x] \*\*University Search:\*\* Fetches data from the \[Universities API](http://universities.hipolabs.com/search).
 
-Then, and every time you update your native dependencies, run:
+# \- \[x] \*\*Filter by Country:\*\* A dropdown menu to dynamically filter universities by country.
 
-```sh
-bundle exec pod install
-```
+# \- \[x] \*\*Infinite Scroll:\*\* Efficiently loads more universities as the user scrolls down the list.
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+# \- \[x] \*\*Favorite System:\*\* Users can add or remove universities from a persistent favorites list.
 
-```sh
-# Using npm
-npm run ios
+# \- \[x] \*\*Persistent Storage:\*\* User's selected country filter and favorited universities are saved locally using `AsyncStorage`.
 
-# OR using Yarn
-yarn ios
-```
+# \- \[x] \*\*In-App WebView:\*\* Clicking a university opens its homepage in a modal with a webview.
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+# \- \[x] \*\*Loading \& Error States:\*\* Displays a loading indicator while fetching data and shows a friendly error message on API failure.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+# \- \[x] \*\*Cross-Platform:\*\* A single codebase that runs seamlessly on both iOS and Android devices.
 
-## Step 3: Modify your app
+# \- \[x] \*\*Modern Theming:\*\* A clean and professional UI with a consistent theme.
 
-Now that you have successfully run the app, let's make changes!
+# 
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+# \## 🛠️ Tech Stack \& Libraries
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+# 
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+# \- \*\*Core:\*\* React Native
 
-## Congratulations! :tada:
+# \- \*\*Navigation:\*\* React Navigation (Bottom Tab Navigator)
 
-You've successfully run and modified your React Native App. :partying_face:
+# \- \*\*API Requests:\*\* Axios
 
-### Now what?
+# \- \*\*Local Storage:\*\* AsyncStorage
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+# \- \*\*UI Components:\*\* React Native WebView, React Native Picker
 
-# Troubleshooting
+# \- \*\*Language:\*\* JavaScript (ES6+)
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+# 
 
-# Learn More
+# \## 🚀 Getting Started
 
-To learn more about React Native, take a look at the following resources:
+# 
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+# Follow these instructions to get a copy of the project up and running on your local machine for development and testing.
+
+# 
+
+# \### Prerequisites
+
+# 
+
+# \- \[Node.js](https://nodejs.org/) (`>=16.x`) and npm
+
+# \- \[Watchman](https://facebook.github.io/watchman/) (for macOS)
+
+# \- A Java Development Kit (JDK)
+
+# \- \[Android Studio](https://developer.android.com/studio) (for Android development)
+
+# \- \[Xcode](https://developer.apple.com/xcode/) (for iOS development on macOS)
+
+# 
+
+# For detailed instructions, follow the official React Native environment setup guide for \*\*React Native CLI Quickstart\*\*: \[https://reactnative.dev/docs/environment-setup](https://reactnative.dev/docs/environment-setup)
+
+# 
+
+# \### Installation
+
+# 
+
+# 1\.  \*\*Clone the repository:\*\*
+
+# &nbsp;   ```sh
+
+# &nbsp;   git clone https://github.com/your-username/UniversityFinderApp.git
+
+# &nbsp;   cd UniversityFinderApp
+
+# &nbsp;   ```
+
+# 2\.  \*\*Install NPM packages:\*\*
+
+# &nbsp;   ```sh
+
+# &nbsp;   npm install
+
+# &nbsp;   ```
+
+# 3\.  \*\*Install iOS dependencies (for macOS):\*\*
+
+# &nbsp;   ```sh
+
+# &nbsp;   cd ios \&\& pod install \&\& cd ..
+
+# &nbsp;   ```
+
+# 
+
+# \### Running the Application
+
+# 
+
+# 1\.  \*\*Start the Metro bundler:\*\*
+
+# &nbsp;   ```sh
+
+# &nbsp;   npx react-native start
+
+# &nbsp;   ```
+
+# 2\.  \*\*Run on a device or emulator:\*\*
+
+# 
+
+# &nbsp;   - \*\*For iOS (macOS only):\*\*
+
+# &nbsp;     ```sh
+
+# &nbsp;     npx react-native run-ios
+
+# &nbsp;     ```
+
+# &nbsp;   - \*\*For Android:\*\*
+
+# &nbsp;     ```sh
+
+# &nbsp;     npx react-native run-android
+
+# &nbsp;     ```
+
+# 
+
+# \## 📁 Project Structure
+
+# 
+
+# The project is structured to be scalable and maintainable.
+
+# 
+
+# ```
+
+# UniversityFinder/
+
+# ├── src/
+
+# │   ├── api/          # API request logic (Axios)
+
+# │   ├── components/   # Reusable components (e.g., UniversityCard, Loader)
+
+# │   ├── navigation/   # Navigation setup (React Navigation)
+
+# │   ├── screens/      # Main screens (BrowseScreen, FavoritesScreen)
+
+# │   ├── storage/      # AsyncStorage helper functions
+
+# │   └── theme/        # Color palette and styling constants
+
+# ├── App.js            # Main application entry point
+
+# └── ...
+
+# ```
+
+# 
+
+# \## 📄 License
+
+# 
+
+# This project is licensed under the MIT License - see the \[LICENSE.md](LICENSE.md) file for details.
+
